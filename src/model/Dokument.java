@@ -5,11 +5,11 @@ package model;
  */
 public class Dokument {
 
-    String opis;
+    private String filepath;
 
-    String filepath;
+    private String opis;
 
-    Korisnik vlasnik;
+    private Korisnik vlasnik;
 
 
     public Dokument() {
