@@ -7,27 +7,19 @@ import java.util.List;
  */
 public class Ucenik extends Korisnik {
 
-    private List<Predmet> predmeti;
     private List<Dokument> dokumenti;
     private String biografija;
+    private String adresa;
 
     public Ucenik() {}
 
     public Ucenik(String ime, String prezime, String email, String password,
-                  Uloga uloga, List<Predmet> predmeti,
-                  List<Dokument> dokumenti, String biografija) {
+                  Uloga uloga, List<Dokument> dokumenti,
+                  String adresa, String biografija) {
         super(ime, prezime, email, password, uloga);
-        this.predmeti = predmeti;
         this.dokumenti = dokumenti;
         this.biografija = biografija;
-    }
-
-    public List<Predmet> getPredmeti() {
-        return predmeti;
-    }
-
-    public void setPredmeti(List<Predmet> predmeti) {
-        this.predmeti = predmeti;
+        this.adresa = adresa;
     }
 
     public List<Dokument> getDokumenti() {
@@ -44,5 +36,13 @@ public class Ucenik extends Korisnik {
 
     public void setBiografija(String biografija) {
         this.biografija = biografija;
+    }
+
+    public String getAdresa() {
+        return adresa;
+    }
+
+    public void setAdresa(String adresa) {
+        this.adresa = adresa;
     }
 }
