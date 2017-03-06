@@ -11,18 +11,20 @@ public class Ucenik extends Korisnik {
     private List<Dokument> dokumenti;
     private String biografija;
     private String adresa;
+    private Racun racun;
 
     public Ucenik() {}
 
     public Ucenik(String ime, String prezime, String email, String password,
                   Uloga uloga, List<Dokument> dokumenti,
                   String adresa, String biografija,
-                  List<Kurs> kursevi) {
+                  List<Kurs> kursevi, Racun racun) {
         super(ime, prezime, email, password, uloga);
         this.dokumenti = dokumenti;
         this.biografija = biografija;
         this.adresa = adresa;
         this.kursevi = kursevi;
+        this.racun = racun;
     }
 
     public List<Dokument> getDokumenti() {
@@ -55,5 +57,13 @@ public class Ucenik extends Korisnik {
 
     public void setKursevi(List<Kurs> kursevi) {
         this.kursevi = kursevi;
+    }
+
+    public Racun getRacun() {
+        return racun;
+    }
+
+    public void setRacun(Racun racun) {
+        this.racun = racun;
     }
 }
