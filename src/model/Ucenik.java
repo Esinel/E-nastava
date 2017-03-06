@@ -7,6 +7,7 @@ import java.util.List;
  */
 public class Ucenik extends Korisnik {
 
+    private List<Kurs> kursevi;
     private List<Dokument> dokumenti;
     private String biografija;
     private String adresa;
@@ -15,11 +16,13 @@ public class Ucenik extends Korisnik {
 
     public Ucenik(String ime, String prezime, String email, String password,
                   Uloga uloga, List<Dokument> dokumenti,
-                  String adresa, String biografija) {
+                  String adresa, String biografija,
+                  List<Kurs> kursevi) {
         super(ime, prezime, email, password, uloga);
         this.dokumenti = dokumenti;
         this.biografija = biografija;
         this.adresa = adresa;
+        this.kursevi = kursevi;
     }
 
     public List<Dokument> getDokumenti() {
@@ -44,5 +47,13 @@ public class Ucenik extends Korisnik {
 
     public void setAdresa(String adresa) {
         this.adresa = adresa;
+    }
+
+    public List<Kurs> getKursevi() {
+        return kursevi;
+    }
+
+    public void setKursevi(List<Kurs> kursevi) {
+        this.kursevi = kursevi;
     }
 }
