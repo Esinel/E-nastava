@@ -17,15 +17,18 @@ public class Kurs {
 
     private String opisKursa;
 
+    private List<Dokument> literatura;
+
     public Kurs() {
     }
 
-    public Kurs(Predmet predmet, List<Ucenik> ucenici, List<Predavac> predavaci, String ucionica, String opisKursa) {
+    public Kurs(Predmet predmet, List<Ucenik> ucenici, List<Predavac> predavaci, String ucionica, String opisKursa, List<Dokument> literatura) {
         this.predmet = predmet;
         this.ucenici = ucenici;
         this.predavaci = predavaci;
         this.ucionica = ucionica;
         this.opisKursa = opisKursa;
+        this.literatura = literatura;
     }
 
     public Predmet getPredmet() {
@@ -66,5 +69,13 @@ public class Kurs {
 
     public void setOpisKursa(String opisKursa) {
         this.opisKursa = opisKursa;
+    }
+
+    public List<Dokument> getLiteratura() {
+        return literatura;
+    }
+
+    public void setLiteratura(List<Dokument> literatura) {
+        this.literatura = literatura;
     }
 }
