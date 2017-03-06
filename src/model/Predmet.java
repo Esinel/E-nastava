@@ -44,6 +44,5 @@ public class Predmet {
 
     public void setSadrzajPredmeta(String sadrzajPredmeta) {
         this.sadrzajPredmeta = sadrzajPredmeta;
-        this.sadrzajPredmeta = sadrzajPredmeta;
     }
 }
