@@ -1,16 +1,27 @@
 package model;
 
-import javax.persistence.CascadeType;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * Created by alligator on 6.3.17..
  */
+@Entity
+@Table(name="Ucenik")
 public class Ucenik extends Korisnik {
 
+    @Id
+    @GeneratedValue
+    @Column(name="ID", unique = true)
+    private int ID;
+
+    @Column(name="biografija")
     private String biografija;
+
+    @Column(name="adresa")
     private String adresa;
+
+    @Column(name="racun")
     private Racun racun;
 
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "ucenici")

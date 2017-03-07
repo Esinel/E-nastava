@@ -1,16 +1,27 @@
 package model;
 
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * Created by alligator on 6.3.17..
  */
+@Entity
+@Table(name="Predmet")
 public class Predmet {
 
+    @Id
+    @GeneratedValue
+    @Column(name="ID", unique = true)
+    private int ID;
+
+    @Column(name="naziv")
     private String naziv;
 
+    @Column(name="brojCasova")
     private String brojCasova;
 
+    @Column(name="sadrzajPredmeta")
     private String sadrzajPredmeta;
 
     public Predmet() {

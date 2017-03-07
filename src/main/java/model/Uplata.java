@@ -1,18 +1,39 @@
 package model;
 
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by alligator on 6.3.17..
  */
+@Entity
+@Table(name="Uplata")
 public class Uplata {
 
+    @Id
+    @GeneratedValue
+    @Column(name="ID", unique = true)
+    private int ID;
+
+    @Column(name="datunPlacanja")
     private Date datumPlacanja;
+
+    @Column(name="uplatilac")
     private String uplatilac;
+
+    @Column(name="primalac")
     private String primalac;
+
+    @Column(name="racunPrimaoca")
     private Racun racunPrimaoca;
+
+    @Column(name="racunUplatioca")
     private Racun racunUplatioca;
+
+    @Column(name="svrhaUplate")
     private String svrhaUplate;
+
+    @Column(name="iznos")
     private double iznos;
 
     public Uplata() {}
