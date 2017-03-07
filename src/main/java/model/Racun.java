@@ -1,15 +1,24 @@
 package model;
 
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * Created by stefan on 3/6/17.
  */
+@Entity
+@Table(name = "Racun")
 public class Racun {
 
+    @Column(name = "brojRacuna")
     private String brojRacuna;
-    private List<Uplata> transakcije;
+
+    @Column(name = "stanjeRacuna")
     private double stanjeRacuna;
+
+    @OneToMany(orphanRemoval = true)
+    @JoinColumn(name = "transakcija_id")
+    private List<Uplata> transakcije;
 
     public Racun() {}
 
