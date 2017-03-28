@@ -39,6 +39,10 @@ public class Polaganje {
     @JoinColumn(name = "predavac_id")
     private Predavac predavac;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "pohadjanje_id")
+    private Pohadjanje pohadjanje;
+
 
     public Polaganje() {}
 
