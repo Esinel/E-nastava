@@ -1,12 +1,12 @@
 package model;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by stefan on 3/28/17.
  */
+@Entity
+@Table(name = "TipAngazmana")
 public class TipAngazmana {
 
     @Id
