@@ -15,6 +15,10 @@ public class Dokument {
     @Column(name = "ID", unique = true)
     private int ID;
 
+    @OneToOne
+    @JoinColumn(name = "tipDokumenta_id")
+    private TipDokumenta tipDokumenta;
+
     @Column(name = "filepath")
     private String filepath;
 

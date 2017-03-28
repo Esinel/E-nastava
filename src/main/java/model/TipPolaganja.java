@@ -19,7 +19,6 @@ public class TipPolaganja {
     @Column(name = "naziv")
     private String naziv;
 
-
     public TipPolaganja(){}
 
     public TipPolaganja(String naziv) {

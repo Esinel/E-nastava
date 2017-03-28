@@ -13,7 +13,11 @@ public class Polaganje {
     @Id
     @GeneratedValue
     @Column(name = "ID", unique = true)
-    protected int ID;
+    private int ID;
+
+    @OneToOne
+    @JoinColumn(name = "tipPolaganja_id")
+    private TipPolaganja tipPolaganja;
 
     @Column(name = "datumPolaganja")
     private Date datumPolaganja;
