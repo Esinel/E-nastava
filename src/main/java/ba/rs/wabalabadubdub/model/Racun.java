@@ -1,4 +1,4 @@
-package model;
+package ba.rs.wabalabadubdub.model;
 
 import javax.persistence.*;
 import java.util.List;
@@ -9,6 +9,11 @@ import java.util.List;
 @Entity
 @Table(name = "Racun")
 public class Racun {
+
+    @Id
+    @GeneratedValue
+    @Column(name = "ID", unique = true)
+    private int ID;
 
     @Column(name = "brojRacuna")
     private String brojRacuna;

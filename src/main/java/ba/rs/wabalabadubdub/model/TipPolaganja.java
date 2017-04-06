@@ -1,4 +1,4 @@
-package model;
+package ba.rs.wabalabadubdub.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +8,8 @@ import javax.persistence.Id;
 /**
  * Created by alligator on 28.3.17..
  */
-@Entity(name = "TipDokumenta")
-public class TipDokumenta {
+@Entity(name = "TipPolaganja")
+public class TipPolaganja {
 
     @Id
     @GeneratedValue
@@ -19,10 +19,9 @@ public class TipDokumenta {
     @Column(name = "naziv")
     private String naziv;
 
+    public TipPolaganja(){}
 
-    public TipDokumenta(){}
-
-    public TipDokumenta(String naziv) {
+    public TipPolaganja(String naziv) {
         this.naziv = naziv;
     }
 

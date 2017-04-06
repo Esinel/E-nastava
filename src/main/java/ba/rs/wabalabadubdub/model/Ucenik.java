@@ -1,4 +1,6 @@
-package model;
+package ba.rs.wabalabadubdub.model;
+
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.List;
@@ -21,7 +23,8 @@ public class Ucenik extends Korisnik {
     @Column(name="adresa")
     private String adresa;
 
-    @Column(name="racun")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="racun_id")
     private Racun racun;
 
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "ucenici")

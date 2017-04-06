@@ -1,4 +1,4 @@
-package model;
+package ba.rs.wabalabadubdub.model;
 
 import javax.persistence.*;
 import java.util.List;
@@ -15,7 +15,8 @@ public class Kurs {
     @Column(name = "ID", unique = true)
     protected int ID;
 
-    @Column(name = "predmet")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="predmet_id")
     private Predmet predmet;
 
     @Column(name = "ucionica")

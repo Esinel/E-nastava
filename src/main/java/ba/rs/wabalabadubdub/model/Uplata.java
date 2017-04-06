@@ -1,4 +1,4 @@
-package model;
+package ba.rs.wabalabadubdub.model;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -24,10 +24,12 @@ public class Uplata {
     @Column(name="primalac")
     private String primalac;
 
-    @Column(name="racunPrimaoca")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="racunPrimaoca_id")
     private Racun racunPrimaoca;
 
-    @Column(name="racunUplatioca")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="racunUplatioca_id")
     private Racun racunUplatioca;
 
     @Column(name="svrhaUplate")

@@ -1,17 +1,20 @@
-package model;
+package ba.rs.wabalabadubdub.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by alligator on 28.3.17..
  */
 @Entity(name = "Predaje")
-public class Predaje {
+public class Predaje implements Serializable{
 
+    @EmbeddedId
     @ManyToOne
     @JoinColumn(name = "predavac_id")
     private Predavac predavac;
 
+    @EmbeddedId
     @ManyToOne
     @JoinColumn(name = "kurs_id")
     private Kurs kurs;

@@ -1,4 +1,4 @@
-package model;
+package ba.rs.wabalabadubdub.model;
 
 import javax.persistence.*;
 
@@ -6,8 +6,8 @@ import javax.persistence.*;
  * Created by stefan on 3/28/17.
  */
 @Entity
-@Table(name = "Uloga")
-public class Uloga {
+@Table(name = "TipAngazmana")
+public class TipAngazmana {
 
     @Id
     @GeneratedValue
@@ -17,9 +17,9 @@ public class Uloga {
     @Column(name="naziv")
     private String naziv;
 
-    public Uloga() {}
+    public TipAngazmana() {}
 
-    public Uloga(int id, String naziv) {
+    public TipAngazmana(int id, String naziv) {
         super();
         this.ID = id;
         this.naziv = naziv;

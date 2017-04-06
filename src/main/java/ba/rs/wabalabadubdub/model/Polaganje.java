@@ -1,4 +1,4 @@
-package model;
+package ba.rs.wabalabadubdub.model;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -32,59 +32,20 @@ public class Polaganje {
     private String komentar;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "kurs_id")
-    private Kurs kurs;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ucenik_id")
-    private Ucenik ucenik;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "predavac_id")
-    private Predavac predavac;
-
-    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "pohadjanje_id")
     private Pohadjanje pohadjanje;
 
 
     public Polaganje() {}
 
-    public Polaganje(Kurs kurs, Ucenik ucenik, Predavac predavac,
-                     Date datumPolaganja, int ocena,
+    public Polaganje(Date datumPolaganja, int ocena,
                      String komentar, int bodovi) {
-        this.kurs = kurs;
-        this.ucenik = ucenik;
-        this.predavac = predavac;
         this.datumPolaganja = datumPolaganja;
         this.ocena = ocena;
         this.komentar = komentar;
         this.bodovi = bodovi;
     }
 
-    public Kurs getKurs() {
-        return kurs;
-    }
-
-    public void setKurs(Kurs kurs) {
-        this.kurs = kurs;
-    }
-
-    public Ucenik getUcenik() {
-        return ucenik;
-    }
-
-    public void setUcenik(Ucenik ucenik) {
-        this.ucenik = ucenik;
-    }
-
-    public Predavac getPredavac() {
-        return predavac;
-    }
-
-    public void setPredavac(Predavac predavac) {
-        this.predavac = predavac;
-    }
 
     public Date getDatumPolaganja() {
         return datumPolaganja;
