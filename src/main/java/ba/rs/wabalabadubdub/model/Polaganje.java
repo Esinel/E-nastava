@@ -13,7 +13,7 @@ public class Polaganje {
     @Id
     @GeneratedValue
     @Column(name = "ID", unique = true)
-    private int ID;
+    private Long ID;
 
     @OneToOne
     @JoinColumn(name = "tipPolaganja_id")

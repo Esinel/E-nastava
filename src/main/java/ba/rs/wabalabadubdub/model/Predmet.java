@@ -13,7 +13,7 @@ public class Predmet {
     @Id
     @GeneratedValue
     @Column(name="ID", unique = true)
-    private int ID;
+    private Long ID;
 
     @Column(name="naziv")
     private String naziv;

@@ -12,7 +12,7 @@ public class Pohadjanje {
     @Id
     @GeneratedValue
     @Column(name = "ID", unique = true)
-    private int ID;
+    private Long ID;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "kurs_id")

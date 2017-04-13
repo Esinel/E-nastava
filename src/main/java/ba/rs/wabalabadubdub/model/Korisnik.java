@@ -8,12 +8,12 @@ import java.util.List;
  */
 @Entity
 @Table(name = "Korisnik")
-public class Korisnik {
+public abstract class Korisnik {
 
     @Id
     @GeneratedValue
     @Column(name = "ID", unique = true)
-    protected int ID;
+    protected Long ID;
 
     @Column(name = "ime")
     protected String ime;
@@ -49,11 +49,11 @@ public class Korisnik {
     }
 
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

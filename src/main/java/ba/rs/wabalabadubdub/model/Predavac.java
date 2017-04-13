@@ -13,7 +13,7 @@ public class Predavac extends Korisnik {
     @Id
     @GeneratedValue
     @Column(name = "ID", unique = true)
-    protected int ID;
+    protected Long ID;
 
     @Column(name = "biografija")
     private String biografija;

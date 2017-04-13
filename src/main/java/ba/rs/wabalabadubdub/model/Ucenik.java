@@ -15,7 +15,7 @@ public class Ucenik extends Korisnik {
     @Id
     @GeneratedValue
     @Column(name="ID", unique = true)
-    private int ID;
+    private Long ID;
 
     @Column(name="biografija")
     private String biografija;

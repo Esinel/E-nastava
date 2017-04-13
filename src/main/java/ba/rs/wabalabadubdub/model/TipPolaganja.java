@@ -14,7 +14,7 @@ public class TipPolaganja {
     @Id
     @GeneratedValue
     @Column(name = "ID", unique = true)
-    private int ID;
+    private Long ID;
 
     @Column(name = "naziv")
     private String naziv;
@@ -25,11 +25,11 @@ public class TipPolaganja {
         this.naziv = naziv;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

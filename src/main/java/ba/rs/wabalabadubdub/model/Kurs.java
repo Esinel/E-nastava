@@ -13,7 +13,7 @@ public class Kurs {
     @Id
     @GeneratedValue
     @Column(name = "ID", unique = true)
-    protected int ID;
+    protected Long ID;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="predmet_id")

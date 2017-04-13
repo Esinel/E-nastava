@@ -13,7 +13,7 @@ public class Racun {
     @Id
     @GeneratedValue
     @Column(name = "ID", unique = true)
-    private int ID;
+    private Long ID;
 
     @Column(name = "brojRacuna")
     private String brojRacuna;

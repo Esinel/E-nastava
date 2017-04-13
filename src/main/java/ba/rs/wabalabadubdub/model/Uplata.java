@@ -13,7 +13,7 @@ public class Uplata {
     @Id
     @GeneratedValue
     @Column(name="ID", unique = true)
-    private int ID;
+    private Long ID;
 
     @Column(name="datunPlacanja")
     private Date datumPlacanja;
