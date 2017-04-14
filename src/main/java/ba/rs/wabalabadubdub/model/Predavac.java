@@ -10,10 +10,10 @@ import java.util.List;
 @Table(name = "Predavac")
 public class Predavac extends Korisnik {
 
-    @Id
+    /*@Id
     @GeneratedValue
     @Column(name = "ID", unique = true)
-    protected Long ID;
+    protected Long ID;*/
 
     @Column(name = "biografija")
     private String biografija;
