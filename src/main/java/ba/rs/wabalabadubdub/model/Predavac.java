@@ -34,6 +34,13 @@ public class Predavac extends Korisnik {
         this.kabinet = kabinet;
     }
 
+    /*public Long getID() {
+        return ID;
+    }
+
+    public void setID(Long ID) {
+        this.ID = ID;
+    }*/
 
     public List<Dokument> getDokumenti() {
         return dokumenti;

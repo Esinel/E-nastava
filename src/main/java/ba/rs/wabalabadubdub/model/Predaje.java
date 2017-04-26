@@ -9,12 +9,17 @@ import java.io.Serializable;
 @Entity(name = "Predaje")
 public class Predaje implements Serializable{
 
-    @EmbeddedId
+    @Id
+    @GeneratedValue
+    @Column(name = "ID", unique = true)
+    protected Long ID;
+
+    /*@EmbeddedId*/
     @ManyToOne
     @JoinColumn(name = "predavac_id")
     private Predavac predavac;
 
-    @EmbeddedId
+    //@EmbeddedId
     @ManyToOne
     @JoinColumn(name = "kurs_id")
     private Kurs kurs;

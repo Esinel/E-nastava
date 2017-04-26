@@ -43,6 +43,16 @@ public class Ucenik extends Korisnik {
         this.kursevi = kursevi;
         this.racun = racun;
     }
+/*
+
+    public Long getID() {
+        return ID;
+    }
+
+    public void setID(Long ID) {
+        this.ID = ID;
+    }
+*/
 
     public List<Dokument> getDokumenti() {
         return dokumenti;

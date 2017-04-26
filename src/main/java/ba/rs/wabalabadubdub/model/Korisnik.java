@@ -7,11 +7,12 @@ import java.util.List;
  * Created by alligator on 6.3.17..
  */
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name = "Korisnik")
 public abstract class Korisnik {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.TABLE)
     @Column(name = "ID", unique = true)
     protected Long ID;
 
